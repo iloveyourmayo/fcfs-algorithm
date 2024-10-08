@@ -13,15 +13,6 @@ button {
   cursor: pointer;
 }
 
-h1 {
-  position: fixed;
-  top: 180px;
-  left: 50%;
-  letter-spacing: 7px;
-  transform: translateX(-50%);
-  color: ;
-  font-size: 3rem; 
-}
 
 body {
   height: 100vh;
