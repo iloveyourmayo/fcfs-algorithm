@@ -3,7 +3,7 @@ function showWelcomeAlert() {
   const result = confirm(message);
 
   if (result) {
-    window.location.href = "index.html"; // Redirect to index.html
+    window.location.href = "index2.html";
   }
 }
 
