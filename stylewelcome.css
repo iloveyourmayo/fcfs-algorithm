@@ -15,7 +15,7 @@ button {
 
 h1 {
   position: fixed;
-  top: 300px;
+  top: 200px;
   left: 50%;
   letter-spacing: 7px;
   transform: translateX(-50%);
