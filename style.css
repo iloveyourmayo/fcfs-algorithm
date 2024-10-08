@@ -107,7 +107,7 @@ input {
 }
 
 input:focus {
-  outline: none; /* or any other desired color */
+  outline: none; 
 }
 
 #num-processes {
@@ -131,7 +131,7 @@ button {
 
 h2 {
   text-align: center;
-  color: #acb4b3; /* Light gray text */
+  color: #acb4b3; 
   font-weight: bold;
 }
 
@@ -139,30 +139,30 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
-  border: 1px solid #333; /* Darker gray border */
+  border: 1px solid #333;
   border-spacing: 0;
 }
 
 th, td {
-  border: 1px solid #333; /* Darker gray border */
+  border: 1px solid #333;
   padding: 8px;
   text-align: center;
 }
 
 th {
-  background-color: #282828; /* Darker gray background for headers */
+  background-color: #282828; 
   font-weight: bold;
-  color: #5d959a; /* Accent color for headers */
+  color: #5d959a;
 }
 
 #gantt-chart {
   height: 30px;
-  border: 1px solid #333; /* Darker gray border */
+  border: 1px solid #333;
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #282828; /* Darker gray background */
+  background-color: #282828; 
 }
 
 #gantt-chart div {
@@ -174,7 +174,7 @@ th {
   color: black;
   line-height: 30px;
   text-align: center;
-  border-right: 1px solid #333; /* Darker gray border */
+  border-right: 1px solid #333;
 }
 
 #gantt-chart div:last-child {
@@ -187,7 +187,7 @@ th {
   overflow: hidden;
   white-space: nowrap;
   font-size: 12px;
-  color: #dcdcdc; /* Light gray text */
+  color: #dcdcdc; 
 }
 
 #computedvalues {
@@ -198,18 +198,18 @@ th {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
-  border: 1px solid #333; /* Darker gray border */
+  border: 1px solid #333;
   border-spacing: 0;
 }
 
 #computed-values-table th, #computed-values-table td {
-  border: 1px solid #333; /* Darker gray border */
+  border: 1px solid #333;
   padding: 8px;
   text-align: center;
 }
 
 #computed-values-table th {
-  background-color: #282828; /* Darker gray background for headers */
+  background-color: #282828; 
   font-weight: bold;
 }
 
