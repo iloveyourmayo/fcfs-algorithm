@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCFS Scheduling Algorithm</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+    </style>
+</head>
+
+<body>
+
+  <ul>
+    <li>F</li>
+    <li>C</li>
+    <li>F</li>
+    <li>S</li>
+    <li> -</li>
+    <li>S</li>
+    <li>C</li>
+    <li>H</li>
+    <li>E</li>
+    <li>D</li>
+    <li>U</li>
+    <li>L</li>
+    <li>I</li>
+    <li>N</li>
+    <li>G</li>
+  </ul>
+
+  <div class="container">
+    <div class="input-section">
+      <label for="num-processes">Number of Processes:</label>
+      <input type="number" id="num-processes">
+      <button id="add-processes">Add Processes</button>
+    </div>
+    <div class="process-table-container">
+      <h2>Process Details</h2>
+      <table id="process-table">
+        <thead>
+          <tr>
+            <th>Process</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+          </tr>
+        </thead>
+        <tbody id="process-tbody"></tbody>
+      </table>
+    </div>
+    <div class="button-section">
+      <button id="calculate-results">Calculate Results</button>
+    </div>
+    <div class="gantt-chart-container">
+      <h2>Gantt Chart</h2>
+      <div id="gantt-chart"></div>
+    </div>
+    <div class="computed-values-container">
+      <h2 id="computedvalues">Computed Values</h2>
+      <table id="computed-values-table">
+        <thead>
+          <tr>
+            <th>Process</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th>Completion Time</th>
+            <th>Turnaround Time</th>
+            <th>Waiting Time</th>
+          </tr>
+        </thead>
+        <tbody id="computed-values-tbody"></tbody>
+      </table>
+    </div>
+    <div class="results-section">
+      <p>Average Waiting Time: <span id="avg-waiting-time"></span></p>
+      <p>Average Turnaround Time: <span id="avg-turnaround-time"></span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@9.1.3/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+<footer>
+  <h3>This project is brought to you by CS2E - G2</h3>
+</footer>
+
+</html>
