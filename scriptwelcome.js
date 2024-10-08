@@ -7,7 +7,7 @@ function showWelcomeAlert() {
     if (result) {
       window.location.href = "index2.html"; 
     }
-  }, 5000); 
+  }, 3000); 
 }
 
 window.addEventListener("load", showWelcomeAlert);
