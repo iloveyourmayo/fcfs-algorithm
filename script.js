@@ -7,15 +7,15 @@ const computedValuesTableBody = document.getElementById('computed-values-tbody')
 const waitingTimeElement = document.getElementById('avg-waiting-time');
 const turnaroundTimeElement = document.getElementById('avg-turnaround-time');
 
-const MAX_PROCESSES = 6; // Define the maximum number of processes allowed
+const MAX_PROCESSES = 6; // maximum # of processes allowed
 
 function addProcesses() {
   const numProcesses = parseInt(numProcessesInput.value);
 
-  // Check if user entered more than the maximum allowed processes
+  // condition if user entered more than the maximum allowed processes
   if (numProcesses > MAX_PROCESSES) {
     alert(`Maximum processes allowed: ${MAX_PROCESSES} only. Enter value between 1 - ${MAX_PROCESSES}.`);
-    return; // Exit the function if exceeded limit
+    return;      // exit the function if exceeded limit
   }
 
   processTableBody.innerHTML = '';
@@ -41,7 +41,7 @@ function calculateFCFS() {
     processes.push({ id: i + 1, arrivalTime, burstTime });
   }
 
-  // Sort processes by arrival time
+  // sort processes by arrival time
   processes.sort((a, b) => a.arrivalTime - b.arrivalTime);
 
   let currentTime = 0;
@@ -50,7 +50,7 @@ function calculateFCFS() {
 
   for (const process of processes) {
     if (process.arrivalTime > currentTime) {
-      currentTime = process.arrivalTime; // Idle time
+      currentTime = process.arrivalTime;        // idle time
     }
 
     const waitingTime = currentTime - process.arrivalTime;
@@ -61,13 +61,13 @@ function calculateFCFS() {
 
     process.waitingTime = waitingTime;
     process.turnaroundTime = turnaroundTime;
-    // Calculate completion time based on current time and burst time
+    // calculate completion time based on current time and burst time
     process.completionTime = currentTime + process.burstTime;
 
     currentTime += process.burstTime;
   }
 
-  // Create Gantt chart string
+  // create gantt chart string
   let ganttChartString = "";
   for (const process of processes) {
     const barWidth = process.burstTime * 10; // Adjust bar width as needed
@@ -85,13 +85,13 @@ function calculateFCFS() {
     `;
   }
 
-  // Update Gantt chart and display results
+  // update gantt chart and display results
   ganttChart.innerHTML = ganttChartString;
 
-  // Clear computed values table
+  // clear computed values table
   computedValuesTableBody.innerHTML = '';
 
-  // Create and display computed values in a table
+  // create & display computed values in a table
   for (const process of processes) {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -105,7 +105,7 @@ function calculateFCFS() {
     computedValuesTableBody.appendChild(row);
   }
 
-  // Update average waiting and turnaround time directly
+  // update average waiting and turnaround time directly
   const avgWaitingTime = (totalWaitingTime / processes.length).toFixed(2);
   const avgTurnaroundTime = (totalTurnaroundTime / processes.length).toFixed(2);
 
@@ -113,6 +113,6 @@ function calculateFCFS() {
   turnaroundTimeElement.textContent = avgTurnaroundTime;
 }
 
-// Add event listeners to buttons
+// add event listeners to buttons
 addProcessesButton.addEventListener('click', addProcesses);
 calculateResultsButton.addEventListener('click', calculateFCFS);
