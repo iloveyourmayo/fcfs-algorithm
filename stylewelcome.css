@@ -19,8 +19,8 @@ h1 {
   left: 50%;
   letter-spacing: 7px;
   transform: translateX(-50%);
-  color: ; /* Lighter font color */
-  font-size: 3rem; /* Larger font size */
+  color: ;
+  font-size: 3rem; 
 }
 
 body {
