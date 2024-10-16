@@ -129,6 +129,12 @@ button {
   font-weight: bold;
 }
 
+#fcfs-label{
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: smaller;
+}
+
 h2 {
   text-align: center;
   color: #acb4b3; 
@@ -232,3 +238,4 @@ footer {
   background-color: #202020;
   color: #555555;
 }
+
