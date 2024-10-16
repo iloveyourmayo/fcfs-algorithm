@@ -79,7 +79,7 @@ function calculateFCFS() {
           <span style="font-size: 16px; font-weight: bold">P${process.id}</span>
         </div>
         <div style="display: flex; justify-content: start; align-items: center; height: 100%">
-          <span style="font-size: 14px; color: #517b77; font-weight: bold">${process.arrivalTime}</span>
+          <span style="font-size: 14px; font-weight: bold; color: #517b77">${process.arrivalTime}</span>
         </div>
         <div style="display: flex; justify-content: end; align-items: center; height: 100%">
           <span style="font-size: 14px">${process.completionTime}</span>
