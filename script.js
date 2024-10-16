@@ -15,7 +15,7 @@ function addProcesses() {
   // condition if user entered more than the maximum allowed processes
   if (numProcesses > MAX_PROCESSES) {
     alert(`Maximum processes allowed: ${MAX_PROCESSES} only. Enter value between 1 - ${MAX_PROCESSES}.`);
-    return;      // exit the function if exceeded limit
+    return; // exit the function if exceeded limit
   }
 
   processTableBody.innerHTML = '';
@@ -50,7 +50,7 @@ function calculateFCFS() {
 
   for (const process of processes) {
     if (process.arrivalTime > currentTime) {
-      currentTime = process.arrivalTime;        // idle time
+      currentTime = process.arrivalTime; // idle time
     }
 
     const waitingTime = currentTime - process.arrivalTime;
@@ -76,10 +76,13 @@ function calculateFCFS() {
     ganttChartString += `
       <div style="width: ${barWidth}px; background-color: ${barColor};">
         <div style="display: flex; justify-content: center; align-items: center; height: 100%">
-          <span style="font-size: 12px; font-weight: bold">P${process.id}</span>
+          <span style="font-size: 16px; font-weight: bold">P${process.id}</span>
+        </div>
+        <div style="display: flex; justify-content: start; align-items: center; height: 100%">
+          <span style="font-size: 14px; color: #517b77; font-weight: bold">${process.arrivalTime}</span>
         </div>
         <div style="display: flex; justify-content: end; align-items: center; height: 100%">
-          <span style="font-size: 10px">${process.completionTime}</span>
+          <span style="font-size: 14px">${process.completionTime}</span>
         </div>
       </div>
     `;
